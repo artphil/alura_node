@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 
 import { Livro } from './livros/livro.entity';
 import { LivrosModule } from './livros/livros.module';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { LivrosModule } from './livros/livros.module';
     }),
 
     LivrosModule,
+    UsuariosModule,
   ],
   exports: [TypeOrmModule],
   controllers: [AppController],
