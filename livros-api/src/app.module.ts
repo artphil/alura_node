@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { ClassSerializerInterceptor, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm/dist/typeorm.module';
 import { ConfigModule } from '@nestjs/config';
 
@@ -8,6 +8,8 @@ import { AppService } from './app.service';
 import { Livro } from './livros/livro.entity';
 import { LivrosModule } from './livros/livros.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+import { FiltroExcecaoHttph } from './common/filtros/filtro-de-excecao-http.filter';
 
 @Module({
   imports: [
@@ -29,6 +31,16 @@ import { UsuariosModule } from './usuarios/usuarios.module';
   ],
   exports: [TypeOrmModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ClassSerializerInterceptor
+    },
+    {
+      provide: APP_FILTER,
+      useClass: FiltroExcecaoHttph
+    }
+  ],
 })
 export class AppModule {}

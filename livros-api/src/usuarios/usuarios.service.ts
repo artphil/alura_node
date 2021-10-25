@@ -4,7 +4,7 @@ import { Usuario } from './usuarios.entity';
 @Injectable()
 export class UsuariosService {
 
-    private usuarios: Array<Usuario> = [
+    public usuarios: Array<Usuario> = [
         {
             id: 123,
             nomeDeUsuario: 'gabriel',
@@ -13,7 +13,7 @@ export class UsuariosService {
             nomeCompleto: 'Gabriel Leite',
             dataDeEntrada: new Date(),
         }
-    ]
+    ];
 
     public cria(usuario: Usuario): Usuario {
         this.usuarios.push(usuario);

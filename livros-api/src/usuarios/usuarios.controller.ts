@@ -17,6 +17,7 @@ export class UsuariosController {
 
     @Post()
     public cria(@Body() usuario: Usuario): Usuario {
+        process.stdout.write(`${usuario}\n`);
         return this.usuariosService.cria(usuario);
     }
 }
