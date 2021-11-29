@@ -1,15 +1,18 @@
 import { ClassSerializerInterceptor, Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm/dist/typeorm.module';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm/dist/typeorm.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { Livro } from './livros/livro.entity';
+import { FiltroExcecaoHttph } from './common/filtros/filtro-de-excecao-http.filter';
+import { TransformaRespostaInterceptor } from './core/http/transforma-resposta.interceptor';
+
 import { LivrosModule } from './livros/livros.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
-import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
-import { FiltroExcecaoHttph } from './common/filtros/filtro-de-excecao-http.filter';
+
+import { Livro } from './livros/livro.entity';
 
 @Module({
   imports: [
@@ -36,6 +39,10 @@ import { FiltroExcecaoHttph } from './common/filtros/filtro-de-excecao-http.filt
     {
       provide: APP_INTERCEPTOR,
       useClass: ClassSerializerInterceptor
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: TransformaRespostaInterceptor
     },
     {
       provide: APP_FILTER,
