@@ -1,28 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import CardNota from "../CardNota";
 
 import "./estilos.css"
 
-class ListaDeNotas extends Component {
-	render() {
+function ListaDeNotas({notas, apagarNota}) {
 		return (
 			<ul className="lista-notas">
-				{this.props.notas.map(({titulo, texto, categoria}, index) => {
+				{notas.map(({titulo, texto}, index) => {
 					return (
 						<li className="lista-notas_item" key={index}>
 							<CardNota 
 							indice={index}
 							titulo={titulo} 
 							texto={texto} 
-              categoria={categoria}
-							apagarNota={this.props.apagarNota}
+							apagarNota={apagarNota}
 							/>
 						</li>
 					);
 				})}
 			</ul>
 		);
-	}
 }
 
 export default ListaDeNotas;
