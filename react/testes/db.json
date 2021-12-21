@@ -50,6 +50,24 @@
       "valor": "100",
       "data": "21/12/2021",
       "id": 8
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "21/12/2021",
+      "id": 9
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "21/12/2021",
+      "id": 10
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "21/12/2021",
+      "id": 11
     }
   ]
 }
