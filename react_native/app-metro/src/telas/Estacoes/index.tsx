@@ -1,19 +1,18 @@
-import * as React from 'react';
+import { Headline } from 'react-native-paper';
 
-import { Title } from 'react-native-paper';
-
-import estacoes from '../../../api/Api';
+import estacoes from '../../../api/estacao';
 import Estacao from '../../componentes/Estacao';
 
 function Estacoes() {
-  return (<>
-    <Title>Estações</Title>
-    {
-      estacoes.map(estacao => {
-        <Estacao dados={estacao} />
-      })
-    }
-  </>
+  return (
+    <>
+      <Headline>Estações</Headline>
+      {
+        estacoes.map(estacao =>
+          <Estacao dados={estacao} key={estacao.id} />
+        )
+      }
+    </>
   );
 }
 
