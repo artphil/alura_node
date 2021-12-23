@@ -3,4 +3,5 @@ interface TEstacao {
   nome: string 
   desc: string
   info: string
+  arredores: string[]
 }

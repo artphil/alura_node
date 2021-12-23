@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Avatar, Card, Paragraph, Title } from 'react-native-paper';
+import { Avatar, Card, List, Paragraph, Text } from 'react-native-paper';
 import icone from '../../../assets/images/favicon.png'
 import estilos from './estilos';
 
@@ -19,7 +19,16 @@ function Estacao({ dados }: Props) {
       />
       {aberto &&
         <Card.Content>
-          <Paragraph>{dados.info}</Paragraph>
+          <Paragraph>Entorno</Paragraph>
+          {dados.arredores.map(item => 
+            <List.Item
+            title={item}
+            left={props => <List.Icon {...props} icon="arrow-right" />}
+            />
+            )}
+          <Paragraph>Informações</Paragraph>
+          <Text>{dados.info}</Text>
+
         </Card.Content>
       }
     </Card>
