@@ -1,6 +1,14 @@
 # App MetroBH
 ## Instalação
 ### Expo com typescript
+versões utilizadas:
+* expo: 44.0.0
+* react: 17.0.1
+* react-native: 0.64.3
+* jest: 26.6.3
+* jest-expo: 44.0.1
+* ts-jest: 26.5.6
+
 `expo init -t expo-template-blank-typescript`
 
 ref: [https://docs.expo.dev/guides/typescript/](https://docs.expo.dev/guides/typescript/)
@@ -8,9 +16,9 @@ ref: [https://docs.expo.dev/guides/typescript/](https://docs.expo.dev/guides/typ
 ### Jest para testes
 #### Dependencias
 * react-test-renderer: `npm i react-test-renderer@17.0.1 --save-dev`
-* jest: `npm i jest --save-dev`
+* jest: `npm i jest@26 --save-dev`
 * jest-expo: `npm i jest-expo --save-dev`
-* ts-jest: `npm i ts-jest --save-dev`
+* ts-jest: `npm i ts-jest@26 --save-dev`
 * jest-coverage-badges: `npm i jest-coverage-badges--save-dev`
 * @types/jest: `npm i @types/jest --save-dev`
 * @types/react-test-renderer: `npm i @types/react-test-renderer --save-dev`
@@ -114,7 +122,14 @@ refs:
 
 ## Outras dependências
 ### react-navigation
-`npm install @react-navigation/native``
+`npm install @react-navigation/native`
+`npm install @react-navigation/bottom-tabs`
+`expo install react-native-screens react-native-safe-area-context`
+
+refs: 
+* [https://reactnavigation.org/docs/getting-started](https://reactnavigation.org/docs/getting-started)
+* [https://reactnavigation.org/docs/tab-based-navigation](https://reactnavigation.org/docs/tab-based-navigation)
+
 #### Testes
 jest/setup.js
 ```javascript
@@ -141,6 +156,14 @@ jest.config.ts
  ],
 ...
 ```
+ref: [https://reactnavigation.org/docs/testing](https://reactnavigation.org/docs/testing)
+
+### @expo/vector-icons 
+Já vem instalado
+
+ref: [https://docs.expo.dev/guides/icons/](https://docs.expo.dev/guides/icons/)
+
+lista de icones: [https://icons.expo.fyi/](https://icons.expo.fyi/)
 
 ## Arquitetura de pastas
 <!-- ref ├ └ │ ─ -->
