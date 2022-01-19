@@ -239,7 +239,7 @@ exports[`Componente App gera o mesmo Snapshot 1`] = `
       }
     >
       <View
-        accessibilityLabel="Home, tab, 1 of 3"
+        accessibilityLabel="Home, tab, 1 of 2"
         accessibilityRole="button"
         accessibilityState={
           Object {
@@ -353,7 +353,7 @@ exports[`Componente App gera o mesmo Snapshot 1`] = `
         </Text>
       </View>
       <View
-        accessibilityLabel="Settings, tab, 2 of 3"
+        accessibilityLabel="Settings, tab, 2 of 2"
         accessibilityRole="button"
         accessibilityState={
           Object {
@@ -460,116 +460,6 @@ exports[`Componente App gera o mesmo Snapshot 1`] = `
           }
         >
           Settings
-        </Text>
-      </View>
-      <View
-        accessibilityLabel="Set, tab, 3 of 3"
-        accessibilityRole="button"
-        accessibilityState={
-          Object {
-            "selected": false,
-          }
-        }
-        accessibilityStates={Array []}
-        accessible={true}
-        collapsable={false}
-        focusable={true}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "flex": 1,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-            Object {
-              "flexDirection": "column",
-              "justifyContent": "flex-end",
-            },
-            undefined,
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "flex": 1,
-              },
-              undefined,
-            ]
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "height": "100%",
-                  "justifyContent": "center",
-                  "minWidth": 25,
-                  "position": "absolute",
-                  "width": "100%",
-                },
-                Object {
-                  "opacity": 0,
-                },
-              ]
-            }
-          >
-            <Text />
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "height": "100%",
-                  "justifyContent": "center",
-                  "minWidth": 25,
-                  "position": "absolute",
-                  "width": "100%",
-                },
-                Object {
-                  "opacity": 1,
-                },
-              ]
-            }
-          >
-            <Text />
-          </View>
-        </View>
-        <Text
-          numberOfLines={1}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "textAlign": "center",
-              },
-              Object {
-                "color": "#8E8E8F",
-              },
-              Object {
-                "fontSize": 10,
-              },
-              undefined,
-            ]
-          }
-        >
-          Set
         </Text>
       </View>
     </View>

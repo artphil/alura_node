@@ -19,6 +19,15 @@ function SettingsScreen() {
     </View>
   );
 }
+interface ITelas {
+  nome: String,
+  componente: React.ReactNode,
+  icone: string
+}
+const telas = [
+  { nome: 'Home', icone: 'subway', componente: HomeScreen },
+  { nome: 'Settings', icone: 'map', componente: SettingsScreen },
+];
 
 const Tab = createBottomTabNavigator();
 
@@ -26,27 +35,17 @@ export default function Navegador() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        {telas.map(tela => 
         <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ color }) => <Icone nome="subway" cor={color} />,
-          }}
-        />
-        <Tab.Screen 
-        name="Settings" 
-        component={SettingsScreen} 
+        key={tela.nome}
+        data-testID={tela.nome}
+        name={tela.nome}
+        component={tela.componente}
         options={{
-          tabBarIcon: ({ color }) => <Icone nome="map" cor={color} />,
+          tabBarIcon: ({ color }) => <Icone nome={tela.icone} cor={color} />,
         }}
         />
-        <Tab.Screen 
-        name="Set" 
-        component={SettingsScreen} 
-        options={{
-          tabBarIcon: ({ color }) => <Icone nome="alert-circle-outline" cor={color} />,
-        }}
-        />
+        )}
       </Tab.Navigator>
     </NavigationContainer>
   );
