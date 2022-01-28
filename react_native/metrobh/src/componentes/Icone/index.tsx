@@ -1,3 +1,9 @@
+/*
+  Gerador de icones padrão do sistema
+  Utiliza icones de expo/vector-icons de forma a 
+  padronizar a exibição de icones
+*/
+
 import * as React from 'react';
 import { Ionicons  as ExpoIcon } from '@expo/vector-icons';
 interface Props {

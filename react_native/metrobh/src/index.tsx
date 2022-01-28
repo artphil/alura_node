@@ -5,7 +5,6 @@
 */
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
 import Navegador from './Navegador';
 
 function App() {
@@ -16,14 +15,5 @@ function App() {
   </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App;

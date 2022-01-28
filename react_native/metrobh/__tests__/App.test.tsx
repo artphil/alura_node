@@ -11,7 +11,6 @@ describe("Componente App", () => {
 
   test("tem 2 filhos", () => {
     const tree = renderer.create(<App />).toJSON() as ReactTestRendererJSON
-    console.log(tree)
     expect(tree?.children?.length).toBe(2);
   })
 })
