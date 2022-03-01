@@ -6,12 +6,14 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import Navegador from './Navegador';
+import Ftp from './Ftp';
 
 function App() {
   return (
   <>
-    <StatusBar />
-    <Navegador />
+    {/* <StatusBar />
+    <Navegador /> */}
+    <Ftp></Ftp>
   </>
   );
 }

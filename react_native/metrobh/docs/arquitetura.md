@@ -3,15 +3,15 @@
 | :---: | :---: | :----: |
 
 ## Arquitetura de pastas
-<!-- ref ├ └ │ ─ -->
+<!-- ref  ─ │ ├ └ 📦 📂 📜-->
 ```shell
-root/
-  ├─ node_modules/
-  ├─ __tests__/
-  ├─ src/
-  │   ├─ assets/
-  │   │   ├─ imagens/
-  │   │   └─ fonts/
+📦root/
+├─ 📂node_modules/
+├─ 📂__tests__/
+├─ 📂src/
+│  ├─ 📂assets/
+│  │  ├─ 📂imagens/
+│  │  └─ 📂fonts/
 ```
 
 ### root
