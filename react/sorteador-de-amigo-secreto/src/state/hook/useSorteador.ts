@@ -3,7 +3,7 @@ import { resultadoAmigoSecreto } from "../atom";
 import realizarSorteio from "../helpers/realizarSorteio";
 import { useListaParticipantes } from "./useListaParticipantes";
 
-function useSorteador() {
+export function useSorteador() {
 
   const participantes = useListaParticipantes()
   const setResultado = useSetRecoilState(resultadoAmigoSecreto)
@@ -13,5 +13,3 @@ function useSorteador() {
     setResultado(resultado)
   }
 }
-
-export default useSorteador;

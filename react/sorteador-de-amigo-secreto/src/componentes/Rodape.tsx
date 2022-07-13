@@ -1,25 +1,28 @@
 import { useNavigate } from "react-router-dom";
 import { useListaParticipantes } from "../state/hook/useListaParticipantes";
+import { useSorteador } from "../state/hook/useSorteador";
 
 function Rodape() {
 
   const participantes = useListaParticipantes()
-  
+  const sortear = useSorteador()
+
   const navegarPara = useNavigate()
   const iniciar = () => {
+    sortear()
     navegarPara('/sorteio')
   }
 
-  return ( 
+  return (
     <footer>
-      <button 
-      disabled={participantes.length < 3}
-      onClick={iniciar}
+      <button
+        disabled={participantes.length < 3}
+        onClick={iniciar}
       >
         Iniciar brincadeira
-        </button>
+      </button>
     </footer>
-   );
+  );
 }
 
 export default Rodape;
