@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react"
-import { useNavigate } from "react-router-dom"
 import { RecoilRoot } from "recoil"
+
 import { useListaParticipantes } from "../state/hook/useListaParticipantes"
-import useSorteador from "../state/hook/useSorteador"
+
 import Rodape from "./Rodape"
 
 
