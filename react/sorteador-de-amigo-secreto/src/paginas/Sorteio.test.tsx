@@ -35,17 +35,17 @@ describe('na pagina de sorteio', () => {
   test('todos os participantes podem exibir seu amigo secreto', () => {
     render(
       <RecoilRoot>
-        <Sorteio/>
+        <Sorteio />
       </RecoilRoot>
     )
-      const opcoes = screen.queryAllByRole('option')
-      expect(opcoes).toHaveLength(participantes.length)
+    const opcoes = screen.queryAllByRole('option')
+    expect(opcoes).toHaveLength(participantes.length + 1)
   })
 
   test('o amigo secreto é exibido quando solicitado', () => {
     render(
       <RecoilRoot>
-        <Sorteio/>
+        <Sorteio />
       </RecoilRoot>
     )
     const seletor = screen.getByPlaceholderText('Selecione o seu nome')

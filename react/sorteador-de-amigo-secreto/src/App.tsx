@@ -13,7 +13,6 @@ function App() {
           <Route path='/' element={<Configuracao/>}/>
           <Route path='/sorteio' element={<Sorteio/>}/>
         </Routes>
-        {/* <Configuracao/> */}
       </RecoilRoot>
     </BrowserRouter>
   );

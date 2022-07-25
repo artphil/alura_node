@@ -35,6 +35,7 @@ function Sorteio() {
           placeholder='Selecione o seu nome'
           onChange={evento => setParticipanteDaVez(evento.target.value)}
         >
+           <option>Selecione um participante</option>
           {participantes.map(participante =>
             <option key={participante}>{participante}</option>)
           }
