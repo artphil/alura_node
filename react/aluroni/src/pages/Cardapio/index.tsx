@@ -10,6 +10,11 @@ function Cardapio() {
       <nav className={styles.menu}>
         <Logo />
       </nav>
+      <header className={styles.header}>
+        <div className={styles.header__text}>
+          A Casa do Código e da Massa
+        </div>
+      </header>
     </main>
    );
 }
