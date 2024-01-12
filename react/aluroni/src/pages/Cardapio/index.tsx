@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from "react";
 
 import styles from "./Cardapio.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
@@ -7,7 +7,8 @@ import Filtros from './Filtros';
 
 
 function Cardapio() {
-  const [busca, setBusca] = React.useState("");
+  const [busca, setBusca] = useState("");
+  const [filtro, setFiltro] = useState<number | null>(null);
 
   return (
     <main>
@@ -23,7 +24,7 @@ function Cardapio() {
         <h3 className={styles.cardapio__titulo}>Cardápio</h3>
         <Buscador busca={busca} setBusca={setBusca} />
         <div className={styles.cardapio__filtros}></div>
-        <Filtros/>
+        <Filtros filtro={filtro} setFiltro={setFiltro}/>
       </section>
     </main>
   );
