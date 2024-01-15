@@ -7,7 +7,7 @@ function Itens() {
   return (
     <div className={style.itens}>
       {itensData.map(item => (
-        <Item key={item.id} />
+        <Item {...item} key={item.id} />
       ))}
     </div>
   );
