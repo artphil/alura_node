@@ -1,0 +1,1 @@
+export type IOpcoesOrdenador = '' | 'porcao' | 'qtd_pessoas' | 'qtd_pessoas'

@@ -6,10 +6,11 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 import opcoes from './opcoes.json';
 
 import style from './Ordenador.module.scss';
+import { IOpcoesOrdenador } from 'types/IOpcoesOrdenador';
 
 interface Props {
-  ordenador: string;
-  setOrdenador: React.Dispatch<React.SetStateAction<string>>;
+  ordenador: IOpcoesOrdenador;
+  setOrdenador: React.Dispatch<React.SetStateAction<IOpcoesOrdenador>>;
 }
 
 function Ordenador({ordenador, setOrdenador}: Props) {
@@ -34,7 +35,7 @@ function Ordenador({ordenador, setOrdenador}: Props) {
         {opcoes.map(opcao => (
           <div 
           className={style.ordenador__option} key={opcao.value}
-          onClick={() => setOrdenador(opcao.value)}
+          onClick={() => setOrdenador(opcao.value as IOpcoesOrdenador)}
           >
             {opcao.name}
           </div>
