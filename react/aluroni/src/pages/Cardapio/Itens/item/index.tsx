@@ -1,5 +1,4 @@
-import logo from 'assets/logo.svg';
-import cardatio from '../itens.json';
+import cardatio from 'data/cardapio.json';
 
 import style from './item.module.scss';
 import classNames from 'classnames';
