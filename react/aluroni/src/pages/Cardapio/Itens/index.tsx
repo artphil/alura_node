@@ -15,8 +15,8 @@ function Itens(props: Props) {
   const [lista, setLista] = useState(cardapio);
 
   function testaBusca(title: string) {
-    const regex = new RegExp(busca, 'i')
-    return regex.test(title)
+    const regex = new RegExp(busca, 'i');
+    return regex.test(title);
   }
 
   function testaFiltro(id: number) {
@@ -26,14 +26,14 @@ function Itens(props: Props) {
 
   function ordenar(lista: typeof cardapio) {
     switch (ordenador) {
-      case 'porcao':
-        return lista.sort((a, b) => a.size > b.size ? 1 : -1)
-      case 'qtd_pessoas':
-        return lista.sort((a, b) => a.serving > b.serving ? 1 : -1)
-      case 'preco':
-        return lista.sort((a, b) => a.price > b.price ? 1 : -1)
-      default:
-        return lista
+    case 'porcao':
+      return lista.sort((a, b) => a.size > b.size ? 1 : -1);
+    case 'qtd_pessoas':
+      return lista.sort((a, b) => a.serving > b.serving ? 1 : -1);
+    case 'preco':
+      return lista.sort((a, b) => a.price > b.price ? 1 : -1);
+    default:
+      return lista;
     }
   }
 
