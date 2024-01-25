@@ -17,11 +17,6 @@ function Cardapio() {
 
   return (
     <main>
-      <header className={styles.header}>
-        <div className={styles.header__text}>
-          A Casa do Código e da Massa
-        </div>
-      </header>
       <section className={styles.cardapio}>
         <h3 className={styles.cardapio__titulo}>Cardápio</h3>
         <Buscador busca={busca} setBusca={setBusca} />
