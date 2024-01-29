@@ -8,6 +8,7 @@ import NotFound from 'pages/NotFound';
 import Inicio from 'pages/Inicio';
 import Cardapio from 'pages/Cardapio';
 import Sobre from 'pages/Sobre';
+import Footer from 'components/Footer';
 
 function AppRouter() {
   return (
@@ -21,6 +22,7 @@ function AppRouter() {
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
