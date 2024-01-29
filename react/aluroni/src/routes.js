@@ -12,18 +12,20 @@ import Footer from 'components/Footer';
 
 function AppRouter() {
   return (
-    <Router>
-      <Menu />
-      <Routes>
-        <Route path='/' element={<PaginaPadrao />} >
-          <Route index element={<Inicio />} />
-          <Route path='cardapio' element={<Cardapio />} />
-          <Route path='sobre' element={<Sobre />} />
-        </Route>
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <main className='container'>
+      <Router>
+        <Menu />
+        <Routes>
+          <Route path='/' element={<PaginaPadrao />} >
+            <Route index element={<Inicio />} />
+            <Route path='cardapio' element={<Cardapio />} />
+            <Route path='sobre' element={<Sobre />} />
+          </Route>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </main>
   );
 }
 
