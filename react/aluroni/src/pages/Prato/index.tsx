@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 
-import cardapio from 'data/cardapio.json';
+import { PratoType } from 'types/CardapioTypes';
 
 import styles from './Prato.module.scss';
 
@@ -9,7 +9,7 @@ import styles from './Prato.module.scss';
 function Prato() {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const { prato } = state as { prato: typeof cardapio[0] };
+  const { prato } = state as { prato: PratoType };
 
   return (
     <>

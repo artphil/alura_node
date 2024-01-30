@@ -1,11 +1,11 @@
-import cardatio from 'data/cardapio.json';
-
-import style from './item.module.scss';
 import classNames from 'classnames';
 
-type Props = typeof cardatio[0];
+import { PratoType } from 'types/CardapioTypes';
 
-function Item(props: Props) {
+import style from './item.module.scss';
+
+
+function Item(props: PratoType) {
   const { title, description, category, size, serving, price, photo } = props;
   return (
     <div className={style.item}>

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import Item from './item';
 import cardapio from 'data/cardapio.json';
 
+import { CardapioType } from 'types/CardapioTypes';
+
 import style from './Itens.module.scss';
 
 interface Props {
@@ -24,7 +26,7 @@ function Itens(props: Props) {
     return true;
   }
 
-  function ordenar(lista: typeof cardapio) {
+  function ordenar(lista: CardapioType) {
     return {
       'porcao': lista.sort((a, b) => a.size > b.size ? 1 : -1),
       'qtd_pessoas': lista.sort((a, b) => a.serving > b.serving ? 1 : -1),
