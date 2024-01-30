@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-
 import { PratoType } from 'types/CardapioTypes';
 
 import style from './item.module.scss';
@@ -7,7 +5,7 @@ import TagsPrato from 'components/TagsPrato';
 
 
 function Item(props: PratoType) {
-  const { title, description, category, size, serving, price, photo } = props;
+  const { title, description, photo } = props;
   return (
     <div className={style.item}>
       <img className={style.item__imagem} src={photo} alt={title} />

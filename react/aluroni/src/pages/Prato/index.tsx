@@ -1,5 +1,4 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import classNames from 'classnames';
 
 import { PratoType } from 'types/CardapioTypes';
 
