@@ -4,6 +4,7 @@ import cardapio from 'data/cardapio.json';
 
 import styles from './Prato.module.scss';
 import TagsPrato from 'components/TagsPrato';
+import NotFound from 'pages/NotFound';
 
 
 function Prato() {
@@ -11,7 +12,7 @@ function Prato() {
   const { id } = useParams();
   const prato = cardapio.find(item => item.id === Number(id));
   if (!prato) {
-    return '';
+    return <NotFound />;
   }
 
   return (
