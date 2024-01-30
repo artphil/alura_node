@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { PratoType } from 'types/CardapioTypes';
 
 import style from './item.module.scss';
+import TagsPrato from 'components/TagsPrato';
 
 
 function Item(props: PratoType) {
@@ -15,15 +16,7 @@ function Item(props: PratoType) {
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
-        <div className={style.item__tags}>
-          <div className={classNames(
-            style.item__tipo,
-            style[`item__tipo__${category.label.toLowerCase()}`]
-          )}> {category.label} </div>
-          <div className={style.item__porcao}> {size} g </div>
-          <div className={style.item__qtdpessoas}> {serving} pessoa{serving === 1 ? '' : 's'} </div>
-          <div className={style.item__valor}> R$ {price} </div>
-        </div>
+        <TagsPrato {...props} />
       </div>
     </div >
   );
