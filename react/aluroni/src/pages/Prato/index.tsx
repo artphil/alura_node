@@ -5,6 +5,7 @@ import cardapio from 'data/cardapio.json';
 import styles from './Prato.module.scss';
 import TagsPrato from 'components/TagsPrato';
 import NotFound from 'pages/NotFound';
+import PaginaPadrao from 'components/PaginaPadrao';
 
 
 function Prato() {
@@ -16,7 +17,7 @@ function Prato() {
   }
 
   return (
-    <>
+    <PaginaPadrao>
       <button className={styles.voltar}
         onClick={() => navigate(-1)}
       >{'< Voltar'}</button>
@@ -28,7 +29,7 @@ function Prato() {
           <TagsPrato {...prato} />
         </div>
       </section >
-    </>
+    </PaginaPadrao>
   );
 }
 
