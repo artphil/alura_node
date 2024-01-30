@@ -21,9 +21,9 @@ function AppRouter() {
             <Route index element={<Inicio />} />
             <Route path='cardapio' element={<Cardapio />} />
             <Route path='sobre' element={<Sobre />} />
+            <Route path='prato/:id' element={<Prato />} />
           </Route>
           <Route path='*' element={<NotFound />} />
-          <Route path='/prato/:id' element={<Prato />} />
         </Routes>
         <Footer />
       </Router>
